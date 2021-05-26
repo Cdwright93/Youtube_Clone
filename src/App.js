@@ -21,7 +21,10 @@ class App extends Component {
   }
   render() {
     return (
+      <div>
        <h1>Hello World!</h1>
+       {this.state.comments.map(comment => <h1>{comment.user}</h1>)}
+       </div>
     );
   }
 }
