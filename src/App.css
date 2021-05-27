@@ -10,3 +10,8 @@ div.ui.grid {
   padding: 1px;
   position: relative;
 }
+
+body {
+  background-color: #4a4a4a;
+  color: white;
+}
