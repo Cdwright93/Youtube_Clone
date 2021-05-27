@@ -22,7 +22,7 @@ const VideoDetail = ({ video }) => {
       </div>
         <p>{video.snippet.description}</p>
       </div>
-      <div class="comments">
+      <div className="comments">
         <CommentForm />
       </div>
     </div>

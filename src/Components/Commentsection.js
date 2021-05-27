@@ -32,6 +32,21 @@ class CommentForm extends Component {
                     <br></br>
                     <input type="submit"></input>
                 </form>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Comments:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Comment would go here</td>
+                        </tr>
+                        <tr>
+                            <td>Next comment would go here</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         )
     }
