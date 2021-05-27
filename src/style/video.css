@@ -3,9 +3,14 @@
   align-items: center;
   padding: 5px;
   cursor: pointer;
+  
 }
 
 .video-item.item img {
   max-width: 150px;
   max-height: 200px;
+}
+
+.ui_relaxed_divided_list {
+  color: red;
 }

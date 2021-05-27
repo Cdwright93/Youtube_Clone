@@ -6,7 +6,7 @@ const VideoDetail = ({ video }) => {
     return <div>
        <h1>Hello World</h1>
        <br></br>
-       <p style={{fontSize:'25px'}}>Search for a video to get started
+       <p style={{fontSize:'25px'}}>Search and select any video
        </p>
     </div>;
   }
