@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import CommentForm from './Commentsection';
 
 const VideoDetail = ({ video }) => {
   if (!video) {
     return <div>
        <h1>Hello World</h1>
        <br></br>
-       <p style={{fontSize:'25px'}}>
+       <p style={{fontSize:'25px'}}>Search for a video to get started
        </p>
     </div>;
   }
@@ -20,6 +21,9 @@ const VideoDetail = ({ video }) => {
         <iframe src={videoSrc} allowFullScreen title="Video player" />
       </div>
         <p>{video.snippet.description}</p>
+      </div>
+      <div class="comments">
+        <CommentForm />
       </div>
     </div>
   );
