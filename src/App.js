@@ -1,31 +1,56 @@
 import './App.css';
 import axios from 'axios'
 import React, { Component } from 'react';
-
-const api = axios.create({
-  baseURL:'http://127.0.0.1:8000/comment/'
-})
-class App extends Component {
-  constructor(){
-    super();
-    this.state = {
-      comments: [],
-    }
-    this.getComments()
+import SearchBar from './Components/Searchbar';
+import youtube from './apis/youtube';
+import VideoList from './Components/VideoList';
+import VideoDetail from './Components/VideoDetail';
+  
+  class App extends React.Component {
+    constructor(){
+      super();
+      this.state = {
+        comments: [],
+        videos: [],
+        selectedVideo: null
+      }
+      const api = axios.create({
+        baseURL:'http://127.0.0.1:8000/comments/'
+      })
+      }
+      handleSubmit = async (termFromSearchBar) => {
+          const response = await youtube.get('/search', {
+              params: {
+                  q: termFromSearchBar
+              }
+          })
+  
+          this.setState({
+              videos: response.data.items
+          })
+          console.log("this is resp",response);
+      };
+      handleVideoSelect = (video) => {
+          this.setState({selectedVideo: video})
+      }
+  
+      render() {
+          return (
+              <div className='ui container' style={{marginTop: '1em'}}>
+                  <SearchBar handleFormSubmit={this.handleSubmit}/>
+                  <div className='ui grid'>
+                      <div className="ui row">
+                          <div className="eleven wide column">
+                              <VideoDetail video={this.state.selectedVideo}/>
+                          </div>
+                          <div className="five wide column">
+                              <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          )
+      }
   }
   
-  getComments = async () => {
-    let data = await api.get('/').then(({ data }) => data)
-    this.setState({ comments : data })
-    console.log(this.state.comments)
-  }
-  render() {
-    return (
-      <div>
-       <h1>Hello World!</h1>
-       {this.state.comments.map(comment => <h1>{comment.user}</h1>)}
-       </div>
-    );
-  }
-}
-export default App
+  export default App;
