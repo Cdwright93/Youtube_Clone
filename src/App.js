@@ -28,10 +28,10 @@ import VideoDetail from './Components/VideoDetail';
           this.setState({
               videos: response.data.items
           })
-          console.log("this is resp",response);
       };
       handleVideoSelect = (video) => {
           this.setState({selectedVideo: video})
+          console.log(video.id.videoId)
       }
   
       render() {
