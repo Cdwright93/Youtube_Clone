@@ -36,7 +36,6 @@ import VideoDetail from './Components/VideoDetail';
   
       render() {
           return (
-              <React.Fragment>
                 <div className='container-fluid'>
                     <div className='row'>
                         <div className='col-md-12'>
@@ -52,22 +51,6 @@ import VideoDetail from './Components/VideoDetail';
                         </div>
                     </div>
                 </div>
-                {/* <div className='ui_container'>
-
-                    
-                    <span className='ui_grid'>
-                        <span className="ui_row">
-                            <span className="eleven wide column">
-                                <VideoDetail video={this.state.selectedVideo}/>
-                            </span>
-                            <span className="ui_related">
-                                <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
-                            </span>
-                        </span>
-                    </span>
-                </div> */}
-              </React.Fragment>
-              
           )
       }
   }
