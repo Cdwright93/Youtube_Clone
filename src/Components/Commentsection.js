@@ -30,7 +30,7 @@ class CommentForm extends Component {
 
     render() {
         return (
-            <div>
+            <div className='container-fluid'>
                 <form className='commentSection'onSubmit={(event) => this.handleSubmit(event)}>
                     <label>Leave a comment:</label>
                     <br></br>
