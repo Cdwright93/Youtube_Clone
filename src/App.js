@@ -6,6 +6,9 @@ import youtube from './apis/youtube';
 import VideoList from './Components/VideoList';
 import VideoDetail from './Components/VideoDetail';
   
+const api = axios.create({
+    baseURL:'http://127.0.0.1:8000/comment/'
+  })
   class App extends React.Component {
     constructor(){
       super();
@@ -14,9 +17,11 @@ import VideoDetail from './Components/VideoDetail';
         videos: [],
         selectedVideo: null
       }
-      const api = axios.create({
-        baseURL:'http://127.0.0.1:8000/comments/'
-      })
+      }
+      getComments = async (video) => {
+        let data = await api.get('/').then(({ data }) => data)
+        this.setState({ comments : data })
+        console.log(this.state.comments)
       }
       handleSubmit = async (termFromSearchBar) => {
           const response = await youtube.get('/search', {
@@ -32,6 +37,7 @@ import VideoDetail from './Components/VideoDetail';
       handleVideoSelect = (video) => {
           this.setState({selectedVideo: video})
           console.log(video.id.videoId)
+          this.getComments(video)
       }
   
       render() {
