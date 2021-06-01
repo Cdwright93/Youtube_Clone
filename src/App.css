@@ -3,12 +3,21 @@ div.five.wide.column {
   position: absolute;
   right: 11px;
 }
-div.ui.grid {
+.ui_grid {
   padding-top: 1px;
+  display: grid;
+  grid-template-columns: auto auto;
 }
-.ui.container {
+.ui_row {
   padding: 1px;
   position: relative;
+  background-color: green;
+}
+
+.ui_related {
+  background-color: rgb(44, 147, 243);
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 
 body {

@@ -38,12 +38,12 @@ import VideoDetail from './Components/VideoDetail';
           return (
               <div className='ui container'>
                   <SearchBar handleFormSubmit={this.handleSubmit}/>
-                  <div className='ui grid'>
-                      <div className="ui row">
+                  <div className='ui_grid'>
+                      <div className="ui_row">
                           <div className="eleven wide column">
                               <VideoDetail video={this.state.selectedVideo}/>
                           </div>
-                          <div className="five wide column">
+                          <div className="ui_related">
                               <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
                           </div>
                       </div>
