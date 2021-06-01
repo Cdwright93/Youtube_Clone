@@ -42,7 +42,7 @@ const api = axios.create({
   
       render() {
           return (
-              <div className='bg-light'>
+              <div className='bg-secondary'>   
                 <div className='container-fluid'>
                     <div className='row'>
                         <div className='col-md-12'>
