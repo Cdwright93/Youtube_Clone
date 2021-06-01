@@ -31,13 +31,13 @@ class CommentForm extends Component {
     render() {
         return (
             <div className='container-fluid'>
-                <form className='commentSection'onSubmit={(event) => this.handleSubmit(event)}>
+                <form className='commentSection' onSubmit={(event) => this.handleSubmit(event)}>
                     <label>Leave a comment:</label>
                     <br></br>
                     <textarea id='commentSection' name='commentSection' rows='5' cols='70'>
                     </textarea>
                     <br></br>
-                    <input type="submit"></input>
+                    <input type="submit" className='submitButton' id='submitButton'></input>
                 </form>
                 <table>
                     <thead>

@@ -2,8 +2,10 @@ table, td {
     border: 1px solid black;
 }
 
-.commentSection {
-    border: 1px solid black;
+
+
+.submitButton:hover {
+    filter: invert(5)
 }
 
 tr:nth-child(odd) {
@@ -12,10 +14,10 @@ tr:nth-child(odd) {
 
 textarea {
     margin:0px 0px;
-    padding:5px;
     min-height:16px;
     line-height:16px;
     width:96%;
-    display:block;
-    margin:0px auto;    
+    display:block;    
   }
+
+  

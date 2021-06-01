@@ -7,11 +7,8 @@ const VideoList = ({videos , handleVideoSelect}) => {
         return (
             
         <VideoItem key={video.id.videoId} video={video} handleVideoSelect={handleVideoSelect} />
-    )})
+    )});
 
-    return (
-    <div>
-        <div className='ui_relaxed_divided_list'>{renderedVideos}</div>
-        </div>
-    )};
+    return <div className='ui_relaxed_divided_list'>{renderedVideos}</div>;
+};
 export default VideoList;
