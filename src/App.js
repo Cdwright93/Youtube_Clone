@@ -36,19 +36,38 @@ import VideoDetail from './Components/VideoDetail';
   
       render() {
           return (
-              <div className='ui_container'>
-                  <SearchBar handleFormSubmit={this.handleSubmit}/>
-                  <div className='ui_grid'>
-                      <div className="ui_row">
-                          <div className="eleven wide column">
-                              <VideoDetail video={this.state.selectedVideo}/>
-                          </div>
-                          <div className="ui_related">
-                              <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+              <React.Fragment>
+                <div className='container-fluid'>
+                    <div className='row'>
+                        <div className='col-md-12'>
+                            <SearchBar handleFormSubmit={this.handleSubmit}/>
+                        </div>
+                    </div>
+                    <div className='row'>
+                        <div className='col-md-6'>
+                            <VideoDetail video={this.state.selectedVideo}/>
+                        </div>
+                        <div className='col-md-6'>
+                            <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
+                        </div>
+                    </div>
+                </div>
+                {/* <div className='ui_container'>
+
+                    
+                    <span className='ui_grid'>
+                        <span className="ui_row">
+                            <span className="eleven wide column">
+                                <VideoDetail video={this.state.selectedVideo}/>
+                            </span>
+                            <span className="ui_related">
+                                <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
+                            </span>
+                        </span>
+                    </span>
+                </div> */}
+              </React.Fragment>
+              
           )
       }
   }
