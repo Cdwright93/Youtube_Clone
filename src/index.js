@@ -9,7 +9,7 @@ ReactDOM.render(
   <React.StrictMode>
     <div className='.bg-secondary' >
       <App />
-    </div>
+      </div>
   </React.StrictMode>,
   document.getElementById('root')
   
