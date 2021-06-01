@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import '../style/commentSection.css'
 
 class CommentForm extends Component {
     constructor(props) {
@@ -30,7 +31,7 @@ class CommentForm extends Component {
     render() {
         return (
             <div>
-                <form onSubmit={(event) => this.handleSubmit(event)}>
+                <form className='commentSection'onSubmit={(event) => this.handleSubmit(event)}>
                     <label>Leave a comment:</label>
                     <br></br>
                     <textarea id='commentSection' name='commentSection' rows='5' cols='70'>

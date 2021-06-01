@@ -36,7 +36,7 @@ import VideoDetail from './Components/VideoDetail';
   
       render() {
           return (
-              <div className='ui container'>
+              <div className='ui_container'>
                   <SearchBar handleFormSubmit={this.handleSubmit}/>
                   <div className='ui_grid'>
                       <div className="ui_row">
