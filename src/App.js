@@ -36,6 +36,7 @@ import VideoDetail from './Components/VideoDetail';
   
       render() {
           return (
+              <div className='bg-light'>
                 <div className='container-fluid'>
                     <div className='row'>
                         <div className='col-md-12'>
@@ -51,6 +52,7 @@ import VideoDetail from './Components/VideoDetail';
                         </div>
                     </div>
                 </div>
+            </div>
           )
       }
   }
