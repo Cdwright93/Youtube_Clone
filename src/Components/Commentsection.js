@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import '../style/commentSection.css'
 
 class CommentForm extends Component {
     constructor(props) {
@@ -20,20 +21,17 @@ class CommentForm extends Component {
     }
 
     //create comment taken from song library project, need to test with comment api
-    /*async createSong() {
-        let response = await axios.post('http://127.0.0.1:8000/music/', this.state);
+    async createComment() {
+        let response = await axios.post('http://127.0.0.1:8000/comments/', this.state);
         this.setState({
-            title: response.data,
-            artist: response.data,
-            album: response.data,
-            release_date: response.data
+                comment: response.data
         });
-    } */
+    }
 
     render() {
         return (
             <div>
-                <form onSubmit={(event) => this.handleSubmit(event)}>
+                <form className='commentSection'onSubmit={(event) => this.handleSubmit(event)}>
                     <label>Leave a comment:</label>
                     <br></br>
                     <textarea id='commentSection' name='commentSection' rows='5' cols='70'>

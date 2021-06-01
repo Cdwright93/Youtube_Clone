@@ -3,17 +3,24 @@ div.five.wide.column {
   position: absolute;
   right: 11px;
 }
-div.ui.grid {
+.ui_grid {
   padding-top: 1px;
+  
 }
-.ui.container {
+.ui_row {
   padding: 1px;
   position: relative;
+  background-color: red;
+  
 }
 
-body {
-  background-color: #4a4a4a;
-  color: white;
+.ui_related {
+  background-color: rgb(44, 147, 243);
+  float: left;
+ 
+}
+.col-md-12 {
+  text-align: center;
 }
 
 textarea{
